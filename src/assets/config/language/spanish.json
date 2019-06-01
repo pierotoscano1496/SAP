@@ -1,0 +1,104 @@
+{
+    "toolbar": {
+        "listItems": [
+            {
+                "id": "navbarDropdownSupport",
+                "name": "Mi Soporte"
+            },
+            {
+                "id": "navbarDropdownProducts",
+                "name": "Productos"
+            },
+            {
+                "id": "navbarDropdownTools",
+                "name": "Herramientas"
+            },
+            {
+                "id": "navbarDropdownMaintenance",
+                "name": "Mantenimiento"
+            },
+            {
+                "id": "navbarDropdownOfferingAndPrograms",
+                "name": "Ofertas y Programas"
+            },
+            {
+                "id": "navbarDropdownApplicationLifecycleMan",
+                "name": "Gestión del Ciclo de Vida de la Aplicación"
+            }
+        ],
+        "listButtons": [
+            {
+                "button": "Buscar"
+            },
+            {
+                "button": "Iniciar sesión"
+            }
+        ],
+        "listLanguages": [
+            "English",
+            "Spanish",
+            "Deutsch",
+            "French",
+            "Italian"
+        ]
+    },
+    "searchBar": {
+        "title": "Buscar respuestas",
+        "description": "Bienvenido al portal de soporte de SAP. Busque notas de SAP, artículos de la base de conocimientos de SAP, contenido de la comunidad de SAP y más.",
+        "placeholder": "Introduzca palabras clave o un número de SAP Note / KBA",
+        "button": "Buscar",
+        "ref": "Búsqueda Avanzada"
+    },
+    "mainOptions": [
+        {
+            "id": 1,
+            "icon": "fas fa-desktop fa-4x fa-fw",
+            "name": "Acceder a mi Launchpad"
+        },
+        {
+            "id": 2,
+            "icon": "far fa-file-alt fa-4x fa-fw",
+            "name": "Reportar un incidente"
+        },
+        {
+            "id": 3,
+            "icon": "fas fa-search fa-4x fa-fw",
+            "name": "Ver incidentes"
+        },
+        {
+            "id": 4,
+            "icon": "fas fa-search fa-4x fa-fw",
+            "name": "Ver los incidentes de SAP SuccessFactors"
+        },
+        {
+            "id": 5,
+            "icon": "fas fa-laptop fa-4x fa-fw",
+            "name": "Descargar Software"
+        },
+        {
+            "id": 6,
+            "icon": "fas fa-user fa-4x fa-fw",
+            "name": "Administrar Usuarios"
+        },
+        {
+            "id": 7,
+            "icon": "fas fa-key fa-4x fa-fw",
+            "name": "Solicitar Claves"
+        },
+        {
+            "id": 8,
+            "icon": "fas fa-cloud fa-4x fa-fw",
+            "name": "Ver disponibilidad en la nube"
+        },
+        {
+            "id": 9,
+            "icon": "fas fa-users fa-4x fa-fw",
+            "name": "Visita la Comunidad SAP"
+        },
+        {
+            "id": 10,
+            "icon": "fas fa-folder-open fa-4x fa-fw",
+            "name": "Buscar documentación de productos"
+        }
+    ]
+}
