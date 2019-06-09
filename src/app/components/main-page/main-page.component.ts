@@ -39,6 +39,24 @@ export class MainPageComponent implements OnInit {
         });
         break;
       }
+      case "Deutsch": {
+        this.http.get(this.languagePath + "deutsch.json").subscribe(res => {
+          this.language = res;
+        });
+        break;
+      }
+      case "French": {
+        this.http.get(this.languagePath + "french.json").subscribe(res => {
+          this.language = res;
+        });
+        break;
+      }
+      case "Italian": {
+        this.http.get(this.languagePath + "italian.json").subscribe(res => {
+          this.language = res;
+        });
+        break;
+      }
     }
 
     return false;

@@ -3,35 +3,35 @@
         "listItems": [
             {
                 "id": "navbarDropdownSupport",
-                "name": "Mon support"
+                "name": "Meine Unterstützung"
             },
             {
                 "id": "navbarDropdownProducts",
-                "name": "Des produits"
+                "name": "Produkte"
             },
             {
                 "id": "navbarDropdownTools",
-                "name": "Outils"
+                "name": "Werkzeuge"
             },
             {
                 "id": "navbarDropdownMaintenance",
-                "name": "Entretien"
+                "name": "Instandhaltung"
             },
             {
                 "id": "navbarDropdownOfferingAndPrograms",
-                "name": "Offres et programmes"
+                "name": "Angebote & Programme"
             },
             {
                 "id": "navbarDropdownApplicationLifecycleMan",
-                "name": "Gestion du cycle de vie des applications"
+                "name": "Application Lifecycle Management"
             }
         ],
         "listButtons": [
             {
-                "button": "Chercher"
+                "button": "Suche"
             },
             {
-                "button": "S'identifier"
+                "button": "Anmeldung"
             }
         ],
         "listLanguages": [
@@ -43,62 +43,62 @@
         ]
     },
     "searchBar": {
-        "title": "Rechercher des réponses",
-        "description": "Bienvenue sur le portail de support SAP. Recherchez des notes SAP, des articles de la base de connaissances SAP, du contenu de la communauté SAP, etc.",
-        "placeholder": "Saisissez des mots-clés ou un numéro SAP Note / KBA",
-        "button": "Chercher",
-        "ref": "Accéder à la recherche d'experts"
+        "title": "Nach Antworten suchen",
+        "description": "Willkommen im SAP Support Portal. Suchen Sie nach SAP-Hinweisen, SAP-Knowledge Base-Artikeln, SAP-Community-Inhalten und mehr.",
+        "placeholder": "Geben Sie Stichwörter oder eine SAP-Hinweis- / KBA-Nummer ein",
+        "button": "Suche",
+        "ref": "Greifen Sie auf die Expertensuche zu"
     },
     "mainOptions": [
         {
             "id": 1,
             "icon": "fas fa-desktop fa-4x fa-fw",
-            "name": "Accéder à mon Launchpad"
+            "name": "Greifen Sie auf mein Launchpad zu"
         },
         {
             "id": 2,
             "icon": "far fa-file-alt fa-4x fa-fw",
-            "name": "Signaler un incident"
+            "name": "Einen Vorfall melden"
         },
         {
             "id": 3,
             "icon": "fas fa-search fa-4x fa-fw",
-            "name": "Voir les incidents"
+            "name": "Vorfälle anzeigen"
         },
         {
             "id": 4,
             "icon": "fas fa-search fa-4x fa-fw",
-            "name": "Afficher les incidents SAP SuccessFactors"
+            "name": "Anzeigen von SAP SuccessFactors-Vorfällen"
         },
         {
             "id": 5,
             "icon": "fas fa-laptop fa-4x fa-fw",
-            "name": "Télécharger des logiciels"
+            "name": "Software herunterladen"
         },
         {
             "id": 6,
             "icon": "fas fa-user fa-4x fa-fw",
-            "name": "gérer les utilisateurs"
+            "name": "Benutzer verwalten"
         },
         {
             "id": 7,
             "icon": "fas fa-key fa-4x fa-fw",
-            "name": "Demander des clés"
+            "name": "Schlüssel anfordern"
         },
         {
             "id": 8,
             "icon": "fas fa-cloud fa-4x fa-fw",
-            "name": "Voir la disponibilité en nuage"
+            "name": "Cloud-Verfügbarkeit anzeigen"
         },
         {
             "id": 9,
             "icon": "fas fa-users fa-4x fa-fw",
-            "name": "Visitez la communauté SAP"
+            "name": "Besuchen Sie die SAP Community"
         },
         {
             "id": 10,
             "icon": "fas fa-folder-open fa-4x fa-fw",
-            "name": "Rechercher dans la documentation produit"
+            "name": "Produktdokumentation durchsuchen"
         }
     ]
 }
