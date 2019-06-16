@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { MainTemplateComponent } from './components/main-template/main-template.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { LoginComponent } from './components/login/login.component';
+import { ListProductsByCustomerComponent } from './components/product/list-products-by-customer/list-products-by-customer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainTemplateComponent,
     MainPageComponent,
-    LoginComponent
+    LoginComponent,
+    ListProductsByCustomerComponent
   ],
   imports: [
     BrowserModule,
