@@ -1,28 +1,26 @@
-<p>
-    <h1>List of products</h1>
-    <br>
-    <table>
-        <thead>
-            <tr *ngFor="let nameHeaderTable of listNamesHeaderTable">
-                <th>{{ nameHeaderTable }}</th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let product of listProducts">
-            <tr>
-                <td>{{ product.productId }}</td>
-                <td>{{ product.sapProduct }}</td>
-                <td>{{ product.sapVersion }}</td>
-                <td>{{ product.sapSupportPackage }}</td>
-                <td>{{ product.sapServerOperatingSystem }}</td>
-                <td>{{ product.sapServerIp }}</td>
-                <td>{{ product.databaseProduct }}</td>
-                <td>{{ product.databaseVersion }}</td>
-                <td>{{ product.databaseSupportPackage }}</td>
-                <td>{{ product.databaseServerOperatingSystem }}</td>
-                <td>{{ product.databaseServerIp }}</td>
-                <td>{{ product.customerId }}</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</p>
+<h1>List of products</h1>
+<br>
+<table>
+    <thead>
+        <tr *ngFor="let nameHeaderTable of listNamesHeaderTable">
+            <th>{{ nameHeaderTable }}</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let product of listProducts">
+        <tr>
+            <td>{{ product.productId }}</td>
+            <td>{{ product.sapProduct }}</td>
+            <td>{{ product.sapVersion }}</td>
+            <td>{{ product.sapSupportPackage }}</td>
+            <td>{{ product.sapServerOperatingSystem }}</td>
+            <td>{{ product.sapServerIp }}</td>
+            <td>{{ product.databaseProduct }}</td>
+            <td>{{ product.databaseVersion }}</td>
+            <td>{{ product.databaseSupportPackage }}</td>
+            <td>{{ product.databaseServerOperatingSystem }}</td>
+            <td>{{ product.databaseServerIp }}</td>
+            <td>{{ product.customerId }}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>

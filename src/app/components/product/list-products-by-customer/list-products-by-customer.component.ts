@@ -13,12 +13,14 @@ export class ListProductsByCustomerComponent implements OnInit {
 
   listNamesHeaderTable: string[] = ['Id', 'SAP Product', 'SAP Version', 'SAP Support Package', 'SAP Sever Operating System', 'SAP Server IP Address', 'Database Product', 'Database Version', 'Database Support Package', 'Database Server Operating System', 'Database Server IP Adress', 'Opciones'];
 
-  constructor(private httpClient: HttpClient, private header: HttpHeaders, private route: ActivatedRoute) { }
+  constructor(private httpClient: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    var params = new HttpParams().set('idComponent', this.route.snapshot.paramMap.get('idComponent'));
+    var params = new HttpParams().set('idComponent', this.route.snapshot.params['idComponent']);
 
     this.httpClient.get<any[]>('', { params }).subscribe(response => {
+      this.listProducts = new Array<Product>();
+
       response.forEach(item => {
         var product = new Product();
         product.productId = item.productId;
