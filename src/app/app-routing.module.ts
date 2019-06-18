@@ -6,6 +6,8 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 
 import { LoginComponent } from './components/login/login.component';
 
+import { ListProductsByCustomerComponent } from "./components/product/list-products-by-customer/list-products-by-customer.component";
+
 const routes: Routes = [
   {
     path: 'sap',
@@ -21,6 +23,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'products/listProducts/:idComponent',
+    component: ListProductsByCustomerComponent
   }
 ];
 
