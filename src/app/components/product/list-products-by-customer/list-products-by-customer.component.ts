@@ -16,8 +16,10 @@ export class ListProductsByCustomerComponent implements OnInit {
   constructor(private httpClient: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    var params = new HttpParams().set('idComponent', this.route.snapshot.params['idComponent']);
+    let idCustomer: number = this.route.snapshot.params['idCustomer'];
+    var params = new HttpParams().set('idCustomer', idCustomer.toString());
 
+    /*
     this.httpClient.get<any[]>('', { params }).subscribe(response => {
       this.listProducts = new Array<Product>();
 
@@ -39,6 +41,28 @@ export class ListProductsByCustomerComponent implements OnInit {
         this.listProducts.push(product);
       });
     })
+    */
+
+    //Only for minitest at Work
+    this.listProducts = new Array<Product>();
+    for (var i = 1; i <= 10; i++) {
+      var product = new Product();
+      product.productId = i;
+      product.sapProduct = 'sapProduct';
+      product.sapVersion = 'sapVersion';
+      product.sapSupportPackage = 'sapSupportPackage';
+      product.sapServerOperatingSystem = 'sapServerOperatingSystem';
+      product.sapServerIp = 'sapServerIp';
+      product.databaseProduct = 'databaseProduct';
+      product.databaseVersion = 'databaseVersion';
+      product.databaseSupportPackage = 'databaseSupportPackage';
+      product.databaseServerOperatingSystem = 'databaseServerOperatingSystem';
+      product.databaseServerIp = 'databaseServerIp';
+      product.customerId = idCustomer;
+
+      this.listProducts.push(product);
+    }
+    console.log(JSON.stringify(this.listProducts));
   }
 
 }
