@@ -25,7 +25,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'product/list-products-by-customer/:idCustomer',
+    path: 'product/list-products-by-customer/:customerId',
     component: ListProductsByCustomerComponent
   }
 ];
