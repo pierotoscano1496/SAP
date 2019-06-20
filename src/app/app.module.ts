@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainNavigator } from './components/shared/main-navigator/main-navigator';
 import { MainTemplateComponent } from './components/main-template/main-template.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { LoginComponent } from './components/login/login.component';
@@ -15,7 +16,8 @@ import { ListProductsByCustomerComponent } from './components/product/list-produ
     MainTemplateComponent,
     MainPageComponent,
     LoginComponent,
-    ListProductsByCustomerComponent
+    ListProductsByCustomerComponent,
+    MainNavigator
   ],
   imports: [
     BrowserModule,

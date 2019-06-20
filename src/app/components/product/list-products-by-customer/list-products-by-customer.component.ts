@@ -3,11 +3,12 @@ import Product from 'src/app/model/Product';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import * as XLSX from 'xlsx';
+import { MainNavigator } from 'src/app/components/shared/main-navigator/main-navigator';
 
 @Component({
   selector: 'app-list-products-by-customer',
   templateUrl: './list-products-by-customer.component.html',
-  styleUrls: ['./list-products-by-customer.component.css']
+  styleUrls: ['./list-products-by-customer.component.css'],
 })
 export class ListProductsByCustomerComponent implements OnInit {
   listProducts: Array<Product> = null;

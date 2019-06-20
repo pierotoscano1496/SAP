@@ -1,28 +1,31 @@
-<h1>List of products</h1>
-<br>
-<table>
-    <thead>
-        <tr>
-            <th *ngFor="let nameHeaderTable of listNamesHeaderTable">{{ nameHeaderTable }}</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let product of listProducts">
-            <td>{{ product.productId }}</td>
-            <td>{{ product.sapProduct }}</td>
-            <td>{{ product.sapVersion }}</td>
-            <td>{{ product.sapSupportPackage }}</td>
-            <td>{{ product.sapServerOperatingSystem }}</td>
-            <td>{{ product.sapServerIp }}</td>
-            <td>{{ product.databaseProduct }}</td>
-            <td>{{ product.databaseVersion }}</td>
-            <td>{{ product.databaseSupportPackage }}</td>
-            <td>{{ product.databaseServerOperatingSystem }}</td>
-            <td>{{ product.databaseServerIp }}</td>
-            <td>{{ product.customerId }}</td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-<hr>
-<button type="button" class="btn btn-primary" (click)="exportListProductsToExcel()">Export to Excel</button>
+<main-navigator></main-navigator>
+<div class="container py-5">
+    <h1>List of products</h1>
+    <hr>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" *ngFor="let nameHeaderTable of listNamesHeaderTable">{{ nameHeaderTable }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of listProducts">
+                <th scope="row">{{ product.productId }}</th>
+                <td>{{ product.sapProduct }}</td>
+                <td>{{ product.sapVersion }}</td>
+                <td>{{ product.sapSupportPackage }}</td>
+                <td>{{ product.sapServerOperatingSystem }}</td>
+                <td>{{ product.sapServerIp }}</td>
+                <td>{{ product.databaseProduct }}</td>
+                <td>{{ product.databaseVersion }}</td>
+                <td>{{ product.databaseSupportPackage }}</td>
+                <td>{{ product.databaseServerOperatingSystem }}</td>
+                <td>{{ product.databaseServerIp }}</td>
+                <td>{{ product.customerId }}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <button type="button" class="btn btn-primary" (click)="exportListProductsToExcel()">Export to Excel</button>
+</div>

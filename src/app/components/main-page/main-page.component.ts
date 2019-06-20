@@ -14,14 +14,15 @@ export class MainPageComponent implements OnInit {
   languagePath: string;
 
   constructor(private http: HttpClient) {
+
+  }
+
+  ngOnInit() {
     this.languagePath = "assets/config/language/";
     this.http.get(this.languagePath + "english.json").subscribe(res => {
       this.language = res;
       console.log(this.language.toolbar.listItems);
     });
-  }
-
-  ngOnInit() {
   }
 
   changeLanguage(lang: string) {
