@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import Product from 'src/app/model/Product';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as XLSX from 'xlsx';
 import { MainNavigator } from 'src/app/components/shared/main-navigator/main-navigator';
+import CustomerDetails from 'src/app/model/details/CustomerDetails';
 
 @Component({
   selector: 'app-list-products-by-customer',
@@ -11,9 +12,14 @@ import { MainNavigator } from 'src/app/components/shared/main-navigator/main-nav
   styleUrls: ['./list-products-by-customer.component.css'],
 })
 export class ListProductsByCustomerComponent implements OnInit {
-  listProducts: Array<Product> = null;
+  customerDetails: CustomerDetails = new CustomerDetails();
+  num = 0;
+  //listProducts: Array<Product> = null;
+  prepareSendToEmail: boolean = false;
+  emailToSend: string = 'torr@gaymail.com';
+  emailSended: boolean = false;
 
-  listNamesHeaderTable: string[] = ['Id', 'SAP Product', 'SAP Version', 'SAP Support Package', 'SAP Sever Operating System', 'SAP Server IP Address', 'Database Product', 'Database Version', 'Database Support Package', 'Database Server Operating System', 'Database Server IP Adress', 'Opciones'];
+  listNamesHeaderTable: string[] = ['Id', 'SAP Product', 'SAP Version', 'SAP Support Package', 'SAP Sever Operating System', 'SAP Server IP Address', 'Database Product', 'Database Version', 'Database Support Package', 'Database Server Operating System', 'Database Server IP Adress', 'Customer'];
 
   constructor(private httpClient: HttpClient, private route: ActivatedRoute) { }
 
@@ -22,10 +28,11 @@ export class ListProductsByCustomerComponent implements OnInit {
     var params = new HttpParams().set('customerId', customerId.toString());
     let urlWS: string = 'http://localhost:5000/api/Product/GetListProductsByCustomer';
 
-    this.httpClient.get<any[]>(urlWS, { params }).subscribe(response => {
-      this.listProducts = new Array<Product>();
+    this.httpClient.get<CustomerDetails>(urlWS, { params }).subscribe(response => {
+      this.customerDetails.name = response.name;
+      this.customerDetails.listProducts = new Array<Product>();
 
-      response.forEach(item => {
+      response.listProducts.forEach(item => {
         var product = new Product();
         product.productId = item.productId;
         product.sapProduct = item.sapProduct;
@@ -35,16 +42,29 @@ export class ListProductsByCustomerComponent implements OnInit {
         product.sapServerIp = item.sapServerIp;
         product.databaseProduct = item.databaseProduct;
         product.databaseVersion = item.databaseVersion;
-        product.databaseSupportPackage = item.dsatabaseSupportPackage;
+        product.databaseSupportPackage = item.databaseSupportPackage;
         product.databaseServerOperatingSystem = item.databaseServerOperatingSystem;
         product.databaseServerIp = item.databaseServerIp;
         product.customerId = item.customerId;
 
-        this.listProducts.push(product);
+        this.customerDetails.listProducts.push(product);
       });
     });
 
-    console.log(JSON.stringify(this.listProducts));
+    console.log(JSON.stringify(this.customerDetails.listProducts));
+  }
+
+  sendEmail() {
+    console.log(this.emailToSend);
+    this.emailSended = true;
+  }
+
+  /*
+  prepareSendExcelListProductsToEmail() {
+    var listProductsWS = XLSX.utils.json_to_sheet(this.listProducts);
+    var wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, listProductsWS, 'List of products');
+    XLSX.writeFile(wb, 'ProductsList.xlsx');
   }
 
   exportListProductsToExcel() {
@@ -53,4 +73,5 @@ export class ListProductsByCustomerComponent implements OnInit {
     XLSX.utils.book_append_sheet(wb, listProductsWS, 'List of products');
     XLSX.writeFile(wb, 'ProductsList.xlsx');
   }
+  */
 }

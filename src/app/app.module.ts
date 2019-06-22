@@ -9,6 +9,8 @@ import { MainTemplateComponent } from './components/main-template/main-template.
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { ListProductsByCustomerComponent } from './components/product/list-products-by-customer/list-products-by-customer.component';
+import { SendListProductsToEmailComponent } from './components/product/list-products-by-customer/send-list-products-to-email/send-list-products-to-email.component';
+import { ListEmployeesByCustomerComponent } from './components/employee/list-employees-by-customer/list-employees-by-customer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ListProductsByCustomerComponent } from './components/product/list-produ
     MainPageComponent,
     LoginComponent,
     ListProductsByCustomerComponent,
-    MainNavigator
+    MainNavigator,
+    SendListProductsToEmailComponent,
+    ListEmployeesByCustomerComponent
   ],
   imports: [
     BrowserModule,

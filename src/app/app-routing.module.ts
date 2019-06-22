@@ -8,6 +8,8 @@ import { LoginComponent } from './components/login/login.component';
 
 import { ListProductsByCustomerComponent } from "./components/product/list-products-by-customer/list-products-by-customer.component";
 
+import { ListEmployeesByCustomerComponent } from "./components/employee/list-employees-by-customer/list-employees-by-customer.component";
+
 const routes: Routes = [
   {
     path: 'sap',
@@ -27,6 +29,10 @@ const routes: Routes = [
   {
     path: 'product/list-products-by-customer/:customerId',
     component: ListProductsByCustomerComponent
+  },
+  {
+    path: 'employee/list-employees-by-customer/:customerId',
+    component: ListEmployeesByCustomerComponent
   }
 ];
 
